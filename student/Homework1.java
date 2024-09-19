@@ -3,27 +3,34 @@ package student;
 public class Homework1 {
 
     public double shippingCalculator(int n){
-        //TODO Write your code here for problem 1
+        double sum = 10.95;
+        for(int i = 0; i < n; i++){
+            sum = sum + 2.95;
+        }
         return 0;
     }
     public boolean isValidTriangle(int a, int b, int c){
-        //TODO Write your code here for problem 2
-        return false;
-
+        if(a+b <= c) return false;
+        if(a+c <= b) return false;
+        if(b+c <= a) return false;
+        return true;
     }
     public boolean isPrime(int number){
-        //TODO Write your code here for problem 3
-        return false;
+        double d = (double)number;
+        if(number == 1) return false;
+        if(number == 2) return true;
+        for(int i = 2; i <= Math.sqrt(d); i++){
+            if(number % i == 0) return false;
+        }
+        return true;
     }
-
     public  int hex2int(String hex) {
-        //TODO Write your code here for problem 4
-        return 0;
+        int decimal = Integer.parseInt(hex, 16);
+        return decimal;
     }
     public String int2hex(int value) {
-        //TODO Write your code here for problem 4
-        return "";
+        String hex = Integer.toHexString(value);
+        return hex;
     }
-
 
 }
